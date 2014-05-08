@@ -13,10 +13,10 @@ import com.edwin.my.Invmb;
 
 public class Main {
 
-	public static void main(String[] args) throws AxisFault,
-			ClassNotFoundException, SQLException {
+	public static void main(String[] args) throws ClassNotFoundException,
+			SQLException, AxisFault {
 
-		String url = "http://192.168.1.7:9080/WebServiceProject/services/Invmb";
+		String url = "http://127.0.0.1:9080/WebServiceProject/services/INVMB";
 
 		String method = "getMb110";
 
@@ -28,15 +28,39 @@ public class Main {
 
 		QName opAddEntry = new QName("http://my.edwin.com", method);
 
-		Object[] opAddEntryArgs = new Object[] { "A0301-122233-05001" };
+		Object[] opAddEntryArgs = new Object[] {""};
 
 		Class[] classes = new Class[] { String.class };
 
+		serviceClient.getOptions().setTimeOutInMilliSeconds(600000L);
 		out.Out(serviceClient.invokeBlocking(opAddEntry, opAddEntryArgs,
 				classes)[0]);
-
-		Invmb i = new Invmb();
-		out.Out(i.getMb110("A0301-122233-05001"));
+		
+		
+//		Invmb i=new Invmb();
+//		out.Out(i.getMb110("1"));
+		
+		
+		
+//		String url = "http://localhost:9080/WebServiceProject/services/AxisTWB";
+//
+//		String method = "sayHello";
+//
+//		RPCServiceClient serviceClient = new RPCServiceClient();
+//		Options options = serviceClient.getOptions();
+//
+//		EndpointReference targetEPR = new EndpointReference(url);
+//		options.setTo(targetEPR);
+//
+//		QName opAddEntry = new QName("http://my.edwin.com", method);
+//
+//		Object[] opAddEntryArgs = new Object[] {"ddd"};
+//
+//		Class[] classes = new Class[] { String.class };
+//
+//		out.Out(serviceClient.invokeBlocking(opAddEntry, opAddEntryArgs,
+//				classes)[0]);
+		
 
 	}
 }

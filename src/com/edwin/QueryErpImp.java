@@ -41,7 +41,7 @@ public class QueryErpImp implements QueryErp {
 
 	public static Connection connErp() {
 
-		DriverManager.setLoginTimeout(5);
+//		DriverManager.setLoginTimeout(5);
 		// HibernateCFG CFG = Lookup.getDefault().lookup(HibernateCFG.class);
 		// long time = System.currentTimeMillis();
 		try {

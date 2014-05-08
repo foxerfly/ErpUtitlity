@@ -1,11 +1,15 @@
 package com.edwin.my;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+
+import java.sql.SQLException;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.edwin.QueryErpImp;
+import com.edwin.out;
 
 public class InvmbTest {
 
@@ -17,15 +21,13 @@ public class InvmbTest {
 	}
 
 	@Test
-	public void testGetMb110() {
-		String symbol="A0301-122233-05001";
-		String sql = "SELECT MB110 FROM INVMB WHERE MB001=?";
-		
-		
-		
-		
-		
-		
+	public void testGetMb110() throws ClassNotFoundException, SQLException {
+
+		Invmb a = new Invmb();
+		String s = a.getMb110();
+//		assertNotNull(s);
+		assertNull(s);
+
 	}
 
 }

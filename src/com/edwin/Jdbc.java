@@ -38,6 +38,7 @@ public class Jdbc {
 			// null, ex);
 			JOptionPane.showMessageDialog(null, ex.getMessage().trim(), "警告",
 					JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "aaaaaa");
 			System.exit(1);
 		}
 		try {
@@ -59,6 +60,7 @@ public class Jdbc {
 				// null, ex1);
 				JOptionPane.showMessageDialog(null, ex1.getMessage().trim(),
 						"警告", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "bbbbbb");
 				System.exit(1);
 			}
 		}
