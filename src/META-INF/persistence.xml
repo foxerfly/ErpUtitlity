@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="ErpUtility">
+		<class>com.edwin.modle.Coptc</class>
+		<class>com.edwin.modle.CoptcPK</class>
+		<class>com.edwin.modle.Coptd</class>
+		<class>com.edwin.modle.CoptdPK</class>
+		<class>com.edwin.modle.Copte</class>
+		<class>com.edwin.modle.CoptePK</class>
+		<class>com.edwin.modle.Coptf</class>
+		<class>com.edwin.modle.CoptfPK</class>
+		<class>com.edwin.modle.Coptg</class>
+		<class>com.edwin.modle.CoptgPK</class>
+		<class>com.edwin.modle.Copth</class>
+		<class>com.edwin.modle.CopthPK</class>
+		<class>com.edwin.modle.Copti</class>
+		<class>com.edwin.modle.CoptiPK</class>
+		<class>com.edwin.modle.Coptj</class>
+		<class>com.edwin.modle.CoptjPK</class>
+		<class>com.edwin.modle.Coptn</class>
+		<class>com.edwin.modle.CoptnPK</class>
+		<class>com.edwin.modle.Copto</class>
+		<class>com.edwin.modle.CoptoPK</class>
+		<properties>
+			<property name="hibernate.connection.username" value="sa"/>
+			<property name="hibernate.connection.password" value="fanski=123"/>
+			<property name="hibernate.connection.url" value="jdbc:sqlserver://192.168.1.4:1433;databaseName=fanski"/>
+			<property name="hibernate.connection.driver_class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+		</properties>
+	</persistence-unit>
+</persistence>
